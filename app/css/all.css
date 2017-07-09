@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "LobsterRegular";
+  src: url("../fonts/LobsterRegular/LobsterRegular.eot");
+  src: url("../fonts/LobsterRegular/LobsterRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/LobsterRegular/LobsterRegular.woff") format("woff"), url("../fonts/LobsterRegular/LobsterRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a:hover, a {
+  text-decoration: inherit;
+  color: inherit; }
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+body {
+  font-family: font_main;
+  color: #4e525d; }
+
+.top_line h1 {
+  float: left; }
+  .top_line h1 a {
+    color: #44c0c2;
+    font: 300 43px/2.3 "LobsterRegular"; }
+
+.top_line nav {
+  float: right; }
+  .top_line nav ul {
+    list-style-type: none; }
+    .top_line nav ul li {
+      float: left; }
+      .top_line nav ul li a {
+        line-height: 5;
+        padding: 10px 15px;
+        display: inline-block; }
+        .top_line nav ul li a:hover, .top_line nav ul li a.active {
+          color: #49cbcd;
+          border-bottom: 2px solid #49cbcd;
+          background-color: #f8f9fb; }
+
+.slider .slide img {
+  width: 100%;
+  position: relative; }
+
+.slider .slide .slider_text {
+  color: #fff;
+  position: absolute;
+  top: 23%;
+  left: 26%;
+  width: 50%;
+  text-align: center; }
+  .slider .slide .slider_text h2 {
+    font-size: 63px; }
+  .slider .slide .slider_text p {
+    font-size: 23px;
+    width: 49%;
+    margin: 30px auto;
+    line-height: 1.7; }
+  .slider .slide .slider_text button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    padding: 15px 40px;
+    font-size: 26px;
+    color: inherit;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px; }
+
+.owl-prev, .owl-next {
+  position: absolute;
+  top: 47%;
+  background: url("../img/nav.png") no-repeat #fefefe center;
+  width: 50px;
+  height: 50px;
+  display: block;
+  opacity: 0.5;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+  .owl-prev:hover, .owl-next:hover {
+    opacity: 1; }
+
+.owl-prev {
+  left: 4%;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.owl-next {
+  right: 4%; }

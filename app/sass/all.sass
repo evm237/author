@@ -1,7 +1,95 @@
 @import "../css/font"
+$font_main: "OpenSansRegular"
+$color_logo: #44c0c2
+$color_blue: #49cbcd
+$color_main_text: #4e525d
 
 *
-	margin: 0
-	padding: 0
+    margin: 0
+    padding: 0
+a:hover, a
+    text-decoration: inherit
+    color: inherit
+.content
+    max-width: 1200px
+    margin: 0 auto
+.clearfix:after
+    display: block
+    content: ""
+    clear: both
+
+body
+    font-family: font_main
+    color: $color_main_text
+
+.top_line
+    h1 
+        float: left
+        a
+            color: $color_logo
+            font: 300 43px/2.3 "LobsterRegular"
+    nav
+        float: right
+        ul
+            list-style-type: none
+            li
+                float: left
+                a
+                    line-height: 5
+                    padding: 10px 15px
+                    display: inline-block
+                    &:hover, &.active
+                        color: $color_blue
+                        border-bottom: 2px solid $color_blue
+                        background-color: #f8f9fb
+.slider          
+    .slide
+        img
+            width: 100%
+            position: relative
+        .slider_text
+            color: #fff
+            position: absolute
+            top: 23%
+            left: 26%
+            width: 50%
+            text-align: center
+            h2
+                font-size: 63px
+            p
+                font-size: 23px
+                width: 49%
+                margin: 30px auto
+                line-height: 1.7
+            button
+                background-color: transparent
+                border: 2px solid #fff
+                border-radius: 5px
+                padding: 15px 40px
+                font-size: 26px
+                color: inherit
+                outline: none
+                cursor: pointer
+                margin-top: 20px
+%owl-base
+    position: absolute
+    top: 47%
+    background: url("../img/nav.png") no-repeat #fefefe center
+    width: 50px
+    height: 50px
+    display: block
+    opacity: 0.5
+    border-radius: 50%
+    &:hover
+        opacity: 1
+.owl-prev
+    @extend %owl-base
+    left: 4%
+    transform: rotate(180deg)
+
+.owl-next
+    @extend %owl-base
+    right: 4%
+
 
 @import "_media"
