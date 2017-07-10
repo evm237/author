@@ -62,6 +62,16 @@ body {
             border-bottom: 2px solid #49cbcd;
             background-color: #f8f9fb; }
 
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  opacity: 0.8;
+  padding-left: 8%; }
+
 .slider .slide img {
   width: 100%;
   position: relative; }
