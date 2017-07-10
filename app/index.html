@@ -9,18 +9,20 @@
 </head>
 <body>
     <header id="home">
-        <div class="top_line content clearfix">
-            <h1><a href="#">Author</a></h1>
-            <nav>
-                <ul>
-                    <li><a class="active" href="#home">Home</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="wrap_top_line">
+            <div class="top_line content clearfix">
+                <h1><a href="#">Author</a></h1>
+                <nav>
+                    <ul>
+                        <li><a class="active" href="#home">Home</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <div class="slider owl-carousel">
             <div class="slide">
@@ -138,8 +140,8 @@
             </div>
             <form action="#">
                 <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea rows="12" placeholder="Message"></textarea>
+                <input type="email" placeholder="Email" required pattern="[A-Za-zА-Яа-яЁё\s]{1,}">
+                <textarea rows="10" placeholder="Message"></textarea>
                 <button>Send</button>
             </form>
         </div>

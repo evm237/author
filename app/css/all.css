@@ -40,6 +40,9 @@ body {
   font-family: font_main;
   color: #4e525d; }
 
+.wrap_top_line {
+  height: 99px; }
+
 .top_line {
   padding: 0 20px; }
   .top_line h1 {
@@ -54,8 +57,8 @@ body {
       .top_line nav ul li {
         float: left; }
         .top_line nav ul li a {
-          line-height: 5;
-          padding: 10px 15px;
+          font: 15px/5 "OpenSansRegular";
+          padding: 11px 20px;
           display: inline-block; }
           .top_line nav ul li a:hover, .top_line nav ul li a.active {
             color: #49cbcd;
@@ -70,7 +73,12 @@ body {
   z-index: 100;
   background-color: white;
   opacity: 0.8;
-  padding-left: 8%; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .fixed h1 a {
+    line-height: 1.5; }
+  .fixed nav ul li a {
+    line-height: 2.7; }
 
 .slider .slide img {
   width: 100%;
@@ -84,18 +92,20 @@ body {
   width: 65%;
   text-align: center; }
   .slider .slide .slider_text h2 {
-    font-size: 63px; }
+    font-size: 63px;
+    font-weight: 600; }
   .slider .slide .slider_text p {
     font-size: 23px;
-    width: 49%;
-    margin: 2% auto;
+    width: 36%;
+    margin: 3% auto;
     line-height: 1.7; }
   .slider .slide .slider_text button {
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
     padding: 15px 40px;
     font-size: 26px;
-    margin-top: 3%; }
+    margin-top: 4%;
+    font-weight: 600; }
 
 .owl-prev, .owl-next {
   position: absolute;
@@ -126,21 +136,24 @@ body {
     background-color: #f1f1f1; }
 
 #team {
-  text-align: center; }
+  text-align: center;
+  font-family: "OpenSansRegular"; }
+  #team h3 {
+    margin-bottom: 100px;
+    font-size: 42px;
+    font-weight: normal; }
   #team .wrap_person {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-    #team .wrap_person h3 {
-      margin-bottom: 75px; }
     #team .wrap_person .person {
       width: 25%;
       padding: 10px;
       position: relative; }
       #team .wrap_person .person:hover:before {
         content: "+";
-        font-weight: 600;
+        font-weight: 800;
         position: absolute;
         left: 42%;
         top: 15%;
@@ -153,11 +166,15 @@ body {
         background-color: #eeeef0;
         -webkit-border-radius: 50%;
                 border-radius: 50%;
-        margin-bottom: 50px; }
+        margin-bottom: 70px; }
       #team .wrap_person .person p {
-        line-height: 1.7; }
+        line-height: 1.6;
+        font-size: 14px; }
+        #team .wrap_person .person p:nth-child(2) {
+          font-size: 22px; }
         #team .wrap_person .person p:nth-child(3) {
-          margin-bottom: 15px; }
+          margin-bottom: 15px;
+          font-size: 14px; }
 
 .wrap_services {
   display: -webkit-box;
@@ -170,16 +187,18 @@ body {
   .wrap_services div {
     width: 30%;
     text-align: center;
-    background-color: #f8f9fb; }
+    background-color: #f8f9fb;
+    font: 300 14px/2.5 "OpenSansRegular"; }
     .wrap_services div h4 {
       background-color: #485460;
       color: #fff;
       font-size: 26px;
-      line-height: 3; }
+      line-height: 2.7;
+      font-weight: inherit; }
     .wrap_services div span {
-      line-height: 4; }
+      line-height: 4;
+      font-size: 20px; }
     .wrap_services div ul {
-      line-height: 2.5;
       list-style-type: none; }
       .wrap_services div ul li {
         border-bottom: 1px solid #ecf0f1;
@@ -190,11 +209,12 @@ body {
       padding: 15px 40px;
       border: none;
       font-size: 17px;
-      font-weight: 600; }
+      line-height: normal; }
 
 footer {
   background-image: url("../img/footer.jpg");
-  background-size: cover; }
+  background-size: cover;
+  font-family: "OpenSansRegular"; }
   footer .contact {
     padding: 90px 10px; }
     footer .contact h3 {
@@ -204,17 +224,21 @@ footer {
       margin-bottom: 100px;
       font-size: 42px; }
     footer .contact div, footer .contact form {
-      width: 48%; }
+      width: 48%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
     footer .contact div {
       float: left;
-      font-size: 14px; }
+      font-size: 14px;
+      padding: 10px; }
       footer .contact div h6 {
         color: #fff;
         font-size: 24px;
         line-height: 2; }
       footer .contact div p {
         line-height: 1.7;
-        margin-bottom: 35px; }
+        margin-bottom: 35px;
+        color: #ababab; }
       footer .contact div p:last-child {
         color: #bface2; }
       footer .contact div ul {
@@ -242,7 +266,8 @@ footer {
                 border-radius: 5px;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
-        margin-bottom: 5%; }
+        margin-bottom: 5%;
+        font-family: inherit; }
       footer .contact form input {
         padding: 12px 20px;
         width: 47%; }
@@ -257,5 +282,4 @@ footer {
         background-color: #49cbcd;
         padding: 15px 60px;
         border: none;
-        font-size: 17px;
-        font-weight: 600; }
+        font-size: 17px; }

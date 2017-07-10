@@ -14,16 +14,20 @@ $(document).ready(function(){
 
     $(window).scroll(function() {
         var top = $(document).scrollTop();
-        if (top > $('header').height()) $("nav").addClass("fixed");
-        else $("nav").removeClass("fixed");
+        if (top > $('header').height() - 50) {
+            $(".top_line").addClass("fixed")
+            .removeClass("content");
+        }
+        else $(".top_line").removeClass("fixed")
+            .addClass("content");
     });
-    $("nav").mouseover(
+    $(".top_line").mouseover(
         function(){
             if( $(this).hasClass('fixed') ){
                 $(this).css({"opacity": 1});
             }
     });
-    $("nav").mouseout(
+    $(".top_line").mouseout(
         function(){
             if( $(this).hasClass('fixed') ){
                 $(this).css({"opacity": 0.8});
