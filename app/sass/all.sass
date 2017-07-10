@@ -3,7 +3,6 @@ $font_main: "OpenSansRegular"
 $color_logo: #44c0c2
 $color_blue: #49cbcd
 $color_main_text: #4e525d
-$color_form_text: #c5c5c5
 
 *
     margin: 0
@@ -23,13 +22,13 @@ a:hover, a
     display: block
     content: ""
     clear: both
-
+h3
+    font-size: 42px
+    font-weight: normal
 body
     font-family: font_main
     color: $color_main_text
-
-.wrap_top_line
-    height: 99px
+    min-width: 320px
 .top_line
     padding: 0 20px
     h1 
@@ -67,6 +66,53 @@ body
         ul
             li a
                 line-height: 2.7
+    .toggle_menu
+        top: 0
+
+%span_base
+    width: 100%
+    height: 3px
+    background: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+.toggle_menu
+    text-align: center
+    line-height: 48px
+    position: absolute
+    right: 20px
+    top: 17px
+    width: 30px
+    height: 25px
+    background-color: $color_blue
+    padding: 9px 8px 2px
+    margin-top: 14px
+    cursor: pointer
+    display: none
+    color: #fff
+    border-radius: 3px
+    &.on span
+        background-color: transparent
+        &:after
+            transform: rotate(45deg) translate(-1px, 0px)
+        &:before
+            transform: rotate(-45deg) translate(6px, -7px)
+    span
+        position: relative
+        display: block
+        @extend %span_base
+        &:after
+            @extend %span_base
+            content: ""
+            position: absolute
+            left: 0
+            top: 8px
+        &:before
+            @extend %span_base
+            content: ""
+            position: absolute
+            left: 0
+            top: 16px
 .slider          
     .slide
         img
@@ -79,13 +125,14 @@ body
             left: 17%
             width: 65%
             text-align: center
+            font-family: $font_main
             h2
                 font-size: 63px
                 font-weight: 600
             p
                 font-size: 23px
-                width: 36%
-                margin: 3% auto
+                width: 40%
+                margin: 2% auto
                 line-height: 1.7
             button
                 @extend %button
@@ -125,22 +172,13 @@ body
     font-family: $font_main 
     h3
         margin-bottom: 100px
-        font-size: 42px
-        font-weight: normal
     .wrap_person
         display: flex
         .person
             width: 25%
             padding: 10px
             position: relative
-            &:hover:before
-                content: "+"
-                font-weight: 800
-                position: absolute
-                left: 42%
-                top: 15%
-                color: #f46d6d
-                font-size: 85px
+            box-sizing: border-box;
             div
                 display: inline-block
                 width: 200px
@@ -148,6 +186,14 @@ body
                 background-color: #eeeef0
                 border-radius: 50%
                 margin-bottom: 70px
+                &:hover:before
+                    content: "+"
+                    font-weight: 800
+                    position: absolute
+                    left: 41%
+                    top: 12%
+                    color: #f46d6d
+                    font-size: 85px
             p
                 line-height: 1.6
                 font-size: 14px
@@ -197,7 +243,6 @@ footer
             color: #fff
             width: 100%
             margin-bottom: 100px
-            font-size: 42px
         div, form
             width: 48%
             box-sizing: border-box
@@ -249,6 +294,7 @@ footer
                 width: 100%
                 padding: 12px 20px
                 resize: none
+                overflow: auto
             button
                 @extend %button
                 float: right

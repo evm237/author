@@ -1,0 +1,139 @@
+@media only screen and (max-width : 1200px)
+    .slider .slide .slider_text 
+        h2
+            font-size: 4.5vw
+        p
+            font-size: 1.5vw
+        button
+            margin-top: 2%
+            font-size: 1.8vw
+
+@media only screen and (max-width : 992px)
+    .slider .slide img
+        width: 130%
+    #team .wrap_person
+        flex-wrap: wrap 
+        .person
+            width: 50%
+            margin-bottom: 60px
+            div:hover:before
+                left: 45%
+                top: 13%
+    .wrap_services 
+        flex-wrap: wrap 
+        div
+            width: 40%
+            margin-bottom: 50px
+    footer .contact form
+        input:nth-child(1)
+            margin-right: 4.5%
+
+@media only screen and (max-width : 768px)
+    .toggle_menu
+        display: block
+        z-index: 11
+    .top_line
+        nav
+            position: static
+            width: 100%
+            display: none
+            text-align: center
+            line-height: 0.5
+            ul
+                background: #fff
+                display: inline-block
+                li
+                    display: block
+                    a
+                        line-height: 1.7
+                        padding: 10px 12px
+    .slider .slide 
+        img
+            width: 160%
+        .slider_text 
+            width: 70%
+            h2
+                font-size: 35px
+            p
+                font-size: 14px
+                width: 70%
+            button
+                font-size: 17px
+                padding: 7px 20px
+                border: 2px solid #fff
+    #team .wrap_person .person
+        div
+            margin-bottom: 30px
+            &:hover:before
+                left: 43%
+                top: 14%
+        p:nth-child(2)
+            font-size: 20px
+    .wrap_services 
+        div
+            width: 90%
+            margin-bottom: 50px
+    footer .contact
+        div, form
+            width: 100%
+        form
+            input:nth-child(1)
+                margin-right: 5%
+    h3
+        font-size: 30px
+
+@media only screen and (max-width : 480px)
+    header
+        position: relative
+        .top_line
+            nav
+                position: absolute
+                top: 98px
+                left: 0
+                z-index: 1000
+                padding: 0
+                ul
+                    width: 100%
+                    background-color: rgba(255,255,255, 0.9)
+                    li
+                        width: 100%
+                        display: inline-block
+                        a
+                            width: 100%
+                            border-bottom: 2px solid transparent
+                            padding: 5px 15%
+                            box-sizing: border-box
+    header .fixed nav
+        top: 64px
+    .slider .slide 
+        img
+            width: 180%
+        .slider_text 
+            width: 90%
+            top: 25%
+            left: 5%
+            h2
+                font-size: 25px
+                line-height: 1.2
+            p
+                font-size: 14px
+                width: 80%
+            button
+                font-size: 14px
+                margin-top: 1%
+    .owl-nav
+        display: none
+    #team .wrap_person
+        .person
+            width: 100%
+            div:hover:before
+                left: 45%
+                top: 15%
+    footer .contact form
+        input
+            width: 45%
+        textarea
+            width: 96%
+        button
+            margin-right: 4% 
+    
